@@ -1,35 +1,44 @@
-// Создаём контейнер для частиц
+// Создаём контейнер для перьев
 const particlesContainer = document.createElement('div');
 particlesContainer.className = 'particles';
 document.body.prepend(particlesContainer);
 
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
+// Эмодзи перьев
+const feathers = ['🪶', '🪶', '🪶', '✨', '🌟', '🍂', '🕊️'];
+
+function createFeather() {
+    const feather = document.createElement('div');
+    feather.className = 'feather';
     
-    const colors = ['gold', 'light', 'blue'];
-    particle.classList.add(colors[Math.floor(Math.random() * colors.length)]);
+    // Случайный символ
+    feather.textContent = feathers[Math.floor(Math.random() * feathers.length)];
     
-    particle.style.left = Math.random() * 100 + '%';
+    // Случайная позиция по горизонтали
+    feather.style.left = Math.random() * 100 + '%';
     
-    const size = Math.random() * 5 + 2;
-    particle.style.width = size + 'px';
-    particle.style.height = size + 'px';
+    // Случайный размер
+    const size = Math.random() * 20 + 18;
+    feather.style.fontSize = size + 'px';
     
-    const duration = Math.random() * 15 + 12;
-    particle.style.animationDuration = duration + 's';
+    // Случайная длительность падения
+    const duration = Math.random() * 12 + 8;
+    feather.style.animationDuration = duration + 's';
     
-    particle.style.animationDelay = Math.random() * 8 + 's';
+    // Случайная задержка
+    feather.style.animationDelay = Math.random() * 3 + 's';
     
-    particlesContainer.appendChild(particle);
+    particlesContainer.appendChild(feather);
     
+    // Удаляем перо после анимации
     setTimeout(() => {
-        particle.remove();
-    }, (duration + 5) * 1000);
+        feather.remove();
+    }, (duration + 3) * 1000);
 }
 
-for (let i = 0; i < 25; i++) {
-    setTimeout(createParticle, Math.random() * 6000);
+// Создаём начальные перья
+for (let i = 0; i < 15; i++) {
+    setTimeout(createFeather, Math.random() * 4000);
 }
 
-setInterval(createParticle, 900);
+// Создаём новые перья постоянно
+setInterval(createFeather, 1200);
