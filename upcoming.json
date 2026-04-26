@@ -1,9 +1,16 @@
 [
   {
-    "agent": "Новый персонаж",
+    "agent": "Николь",
     "banner": "Дебют",
     "version": "5.7",
-    "lastBannerDate": "Скоро Анонс!",
-    "image": ""
+    "lastBannerDate": "2026-06-15",
+    "image": "images/nicole.png"
+  },
+  {
+    "agent": "Лоэн",
+    "banner": "Дебют",
+    "version": "5.7",
+    "lastBannerDate": "2026-06-15",
+    "image": "images/loen.png"
   }
 ]
