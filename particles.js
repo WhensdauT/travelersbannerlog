@@ -3,15 +3,12 @@ const particlesContainer = document.createElement('div');
 particlesContainer.className = 'particles';
 document.body.prepend(particlesContainer);
 
-// Эмодзи перьев
-const feathers = ['🪶', '🪶', '🪶', '✨', '🌟', '🍂', '🕊️'];
-
 function createFeather() {
     const feather = document.createElement('div');
     feather.className = 'feather';
     
-    // Случайный символ
-    feather.textContent = feathers[Math.floor(Math.random() * feathers.length)];
+    // Только перо
+    feather.textContent = '🪶';
     
     // Случайная позиция по горизонтали
     feather.style.left = Math.random() * 100 + '%';
