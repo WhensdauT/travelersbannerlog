@@ -1,6 +1,6 @@
 [
   {"agent": "Варка", "banner": "Дебют", "version": "6.4", "lastBannerDate": "2026-02-25", "image": "images/varka.png"},
-  {"agent": "Цзы Бай", "banner": "Дебют", "version": "6.3", "lastBannerDate": "2026-02-03", "image": "images/zbai.png"},
+  {"agent": "Цзы Бай", "banner": "Дебют", "version": "6.3", "lastBannerDate": "2026-02-03", "image": "images/zibai.png"},
   {"agent": "Венти", "banner": "Реран", "version": "4.1", "lastBannerDate": "2023-10-17", "image": "images/venti.png"},
   {"agent": "Чжун Ли", "banner": "Реран", "version": "4.0", "lastBannerDate": "2023-09-05", "image": "images/zhongli.png"},
   {"agent": "Тарталья", "banner": "Реран", "version": "4.0", "lastBannerDate": "2023-09-05", "image": "images/tartaglia.png"},
@@ -36,5 +36,4 @@
   {"agent": "Муалани", "banner": "Дебют", "version": "5.0", "lastBannerDate": "2024-08-28", "image": "images/Mualani.png"},
   {"agent": "Шилонен", "banner": "Дебют", "version": "5.1", "lastBannerDate": "2024-10-09", "image": "images/xilonen.png"},
   {"agent": "Чиори", "banner": "Дебют", "version": "4.5", "lastBannerDate": "2024-03-13", "image": "images/chiori.png"},
-  {"agent": "Сетос", "banner": "Дебют", "version": "4.7", "lastBannerDate": "2024-06-05", "image": ""}
 ]
