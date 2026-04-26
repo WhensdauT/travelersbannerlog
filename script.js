@@ -18,7 +18,7 @@ fetch('upcoming.json')
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
       
       card.innerHTML = `
-        <img src="${entry.image}" alt="${entry.agent}" class="card-img" loading="lazy" onerror="this.src='https://via.placeholder.com/400x500/f5f0e8/c9a03d?text=Coming+Soon'">
+        <img src="${entry.image}" alt="${entry.agent}" class="card-img" loading="lazy">
         <div class="card-content">
           <div class="upcoming-badge">✨ СКОРО</div>
           <div class="character-name">${entry.agent}</div>
@@ -44,7 +44,7 @@ fetch('upcoming.json')
   });
 
 // =====================
-// 2. Таймер (исправлен текст)
+// 2. Таймер
 // =====================
 function startCountdown(targetDate) {
   function updateTimer() {
@@ -85,7 +85,7 @@ fetch('data.json')
     let currentFilter = 'all';
     let currentSort = 'newest';
     
-    // Топ-5 по дням без рерана (только ивентовые)
+    // Топ-5 по дням без рерана
     const top5 = [...data]
       .sort((a, b) => {
         const daysA = Math.floor((new Date() - new Date(a.lastBannerDate)) / (1000 * 60 * 60 * 24));
@@ -145,7 +145,7 @@ fetch('data.json')
         card.className = 'card';
         const days = Math.floor((new Date() - new Date(entry.lastBannerDate)) / (1000 * 60 * 60 * 24));
         card.innerHTML = `
-          <img src="${entry.image}" alt="${entry.agent}" class="card-img" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300/f5f0e8/c9a03d?text=No+Image'">
+          <img src="${entry.image}" alt="${entry.agent}" class="card-img" loading="lazy">
           <div class="card-content">
             <div class="character-name">${entry.agent}</div>
             <div class="card-info">
