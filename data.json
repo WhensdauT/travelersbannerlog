@@ -34,12 +34,5 @@
   {"agent": "Кирара", "banner": "Дебют", "version": "3.7", "lastBannerDate": "2023-05-24", "image": ""},
   {"agent": "Шилонен", "banner": "Дебют", "version": "5.1", "lastBannerDate": "2024-10-09", "image": ""},
   {"agent": "Чиори", "banner": "Дебют", "version": "4.5", "lastBannerDate": "2024-03-13", "image": ""},
-  {"agent": "Сетос", "banner": "Дебют", "version": "4.7", "lastBannerDate": "2024-06-05", "image": ""},
-  {"agent": "Джинн", "banner": "Стандарт", "version": "1.0", "lastBannerDate": "2020-09-28", "image": ""},
-  {"agent": "Дилюк", "banner": "Стандарт", "version": "1.0", "lastBannerDate": "2020-09-28", "image": ""},
-  {"agent": "Кэ Цин", "banner": "Стандарт", "version": "1.0", "lastBannerDate": "2020-09-28", "image": ""},
-  {"agent": "Мона", "banner": "Стандарт", "version": "1.0", "lastBannerDate": "2020-09-28", "image": ""},
-  {"agent": "Ци Ци", "banner": "Стандарт", "version": "1.0", "lastBannerDate": "2020-09-28", "image": ""},
-  {"agent": "Тигнари", "banner": "Стандарт", "version": "3.0", "lastBannerDate": "2022-08-24", "image": ""},
-  {"agent": "Дэхья", "banner": "Стандарт", "version": "3.5", "lastBannerDate": "2023-03-01", "image": ""}
+  {"agent": "Сетос", "banner": "Дебют", "version": "4.7", "lastBannerDate": "2024-06-05", "image": ""}
 ]
