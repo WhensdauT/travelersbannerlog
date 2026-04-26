@@ -8,7 +8,7 @@ function createFeather() {
     feather.className = 'feather';
     
     // Только перо
-    feather.textContent = '🪶';
+    feather.textContent = '🌠';
     
     // Случайная позиция по горизонтали
     feather.style.left = Math.random() * 100 + '%';
