@@ -38,8 +38,14 @@ fetch('upcoming.json')
     if (upcomingData.length > 0) {
       startCountdown(upcomingData[0].lastBannerDate);
     }
+  })
+  .catch(err => {
+    console.error('Ошибка загрузки upcoming.json:', err);
   });
 
+// =====================
+// 2. Таймер (исправлен текст)
+// =====================
 function startCountdown(targetDate) {
   function updateTimer() {
     const now = new Date();
@@ -47,7 +53,7 @@ function startCountdown(targetDate) {
     const diff = target - now;
     
     if (diff <= 0) {
-      document.getElementById('countdown').innerHTML = '<span>✨ Уже</span> в игре!';
+      document.getElementById('countdown').innerHTML = '<span>✨ Скоро</span> анонс!';
       return;
     }
     
@@ -65,7 +71,7 @@ function startCountdown(targetDate) {
 }
 
 // =====================
-// 2. Все персонажи + топ-5 + фильтры + сортировка
+// 3. Все персонажи + топ-5 + фильтры + сортировка
 // =====================
 fetch('data.json')
   .then(response => response.json())
@@ -79,6 +85,7 @@ fetch('data.json')
     let currentFilter = 'all';
     let currentSort = 'newest';
     
+    // Топ-5 по дням без рерана (только ивентовые)
     const top5 = [...data]
       .sort((a, b) => {
         const daysA = Math.floor((new Date() - new Date(a.lastBannerDate)) / (1000 * 60 * 60 * 24));
@@ -171,19 +178,23 @@ fetch('data.json')
     });
   })
   .catch(err => {
-    console.error('Ошибка:', err);
-    document.getElementById('banner-container').innerHTML = '<p style="text-align:center;padding:40px;color:#9b8a70;">Ошибка загрузки данных</p>';
+    console.error('Ошибка загрузки data.json:', err);
+    document.getElementById('banner-container').innerHTML = '<p style="text-align:center;padding:40px;color:#9b8a70;">Ошибка загрузки данных. Проверьте консоль (F12).</p>';
   });
 
-// Кнопка "Наверх"
+// =====================
+// 4. Кнопка "Наверх"
+// =====================
 const scrollTopBtn = document.getElementById('scroll-top');
-window.addEventListener('scroll', () => {
+if (scrollTopBtn) {
+  window.addEventListener('scroll', () => {
     if (window.scrollY > 500) {
-        scrollTopBtn.classList.add('show');
+      scrollTopBtn.classList.add('show');
     } else {
-        scrollTopBtn.classList.remove('show');
+      scrollTopBtn.classList.remove('show');
     }
-});
-scrollTopBtn.addEventListener('click', () => {
+  });
+  scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  });
+}
